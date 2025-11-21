@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Tahmini</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f5;
+            --bg-tertiary: #e0e0e0;
+            --text-primary: #000000;
+            --border-color: #cccccc;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1e1e1e;
+                --bg-secondary: #2d2d2d;
+                --bg-tertiary: #3d3d3d;
+                --text-primary: #ffffff;
+                --border-color: #555555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Gece Modu Butonu -->
+    <button class="btn btn-dark position-fixed top-0 end-0 m-3" id="darkModeToggle" style="z-index: 1000;">🌙 Gece Modu</button>
+
+    <!-- Header: Konum Seçimi -->
+    <header class="bg-white border-bottom py-4">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <select id="citySelect" class="form-select">
+                        <option value="">Şehir Seç</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select id="districtSelect" class="form-select">
+                        <option value="">İlçe Seç</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <small class="text-muted">
+                        <span>Rakım: 1000m</span> •
+                        <span>Enlem: 39.12°</span> •
+                        <span>Boylam: 35.78°</span> •
+                        <span>Gün Doğumu: 06:45</span> •
+                        <span>Gün Batımı: 19:30</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Anlık Durum Şeridi -->
+    <section class="current-weather py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-4">
+                        <div>
+                            <div class="temperature display-4 fw-bold" id="temperature">22°C</div>
+                            <div class="condition fs-5" id="condition">Güneşli</div>
+                        </div>
+                        <div class="location-name fs-5" id="locationName">Şehir Seçiniz</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row text-center">
+                        <div class="col-4 col-lg-2">
+                            <div class="metric-box">
+                                <div class="fs-4">💧</div>
+                                <small class="d-block">Yağış</small>
+                                <div id="precipitation">0 mm</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <div class="metric-box">
+                                <div class="fs-4">💨</div>
+                                <small class="d-block">Nem</small>
+                                <div id="humidity">65%</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <div class="metric-box">
+                                <div class="fs-4">🌬️</div>
+                                <small class="d-block">Rüzgar</small>
+                                <div id="wind">15 km/sa</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <div class="metric-box pressure-absolute">
+                                <div class="fs-4">⊙</div>
+                                <small class="d-block">A. Basınç</small>
+                                <div id="absPressure">1013 hPa</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-2">
+                            <div class="metric-box pressure-relative">
+                                <div class="fs-4">⊖</div>
+                                <small class="d-block">D.İ. Basınç</small>
+                                <div id="relPressure">1013 hPa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saatlik Tahmin Tablosu -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Saatlik Tahmin</h2>
+            <div class="table-responsive">
+                <table class="table table-hover forecast-table">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Saat</th>
+                            <th>Durum</th>
+                            <th>Sıcaklık (°C)</th>
+                            <th>Hissedilen (°C)</th>
+                            <th>Nem (%)</th>
+                            <th>Rüzgar Yönü</th>
+                            <th>Ort. Rüzgar (km/sa)</th>
+                            <th>Maks. Rüzgar (km/sa)</th>
+                            <th>Visiblite (km)</th>
+                            <th>Basınç (hPa)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecastTableBody">
+                        <!-- Dinamik olarak doldurulacak -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
