@@ -1,0 +1,20 @@
+@model List<Course>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vievport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>    
+<body>
+    @foreach(var kurs in Model)
+    {
+        <p>id: @kurs.id</p>
+        <p>Title: @kurs.Title</p>
+        <p>Description: @kurs.Description</p>
+    }
+
+</body>
+</html>
