@@ -1,0 +1,59 @@
+/* Ders notu s.7–10 ve s.19: CSS değişkenleri, seçiciler, hover ve media query */
+:root {
+  --ana-renk: #1762d5;
+  --koyu-renk: #172238;
+  --acik-arkaplan: #f5f7fb;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--koyu-renk);
+  background-color: #fff;
+}
+section { scroll-margin-top: 20px; }
+.brand-symbol { color: #ffcb45; }
+.nav-link:hover, footer a:hover { color: #ffcb45 !important; }
+.hero { background: linear-gradient(135deg, #f7faff 0%, #e5edff 100%); }
+.hero-aciklama { max-width: 650px; color: #536176; line-height: 1.65; }
+.btn-primary { background-color: var(--ana-renk); border-color: var(--ana-renk); }
+.btn-primary:hover { background-color: #114a9f; border-color: #114a9f; }
+.album { background-color: var(--acik-arkaplan) !important; }
+.card {
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(20, 34, 60, .14) !important;
+}
+.card-visual {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-align: center;
+}
+.card-visual span { font-size: clamp(2.3rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: 2px; }
+.card-visual small { font-size: .75rem; letter-spacing: 3px; opacity: .86; }
+.visual-html { background: linear-gradient(135deg, #e76033, #ff9a55); }
+.visual-css { background: linear-gradient(135deg, #1477c9, #47b5f4); }
+.visual-bootstrap { background: linear-gradient(135deg, #55349b, #a77aec); }
+.visual-responsive { background: linear-gradient(135deg, #18805d, #43bb8e); }
+.visual-forms { background: linear-gradient(135deg, #b63278, #f080aa); }
+.visual-project { background: linear-gradient(135deg, #172238, #455c82); }
+.card-title { font-weight: 700; }
+.card-text { line-height: 1.6; }
+.kayit-karti { background: #fff; }
+.form-control:focus, .form-select:focus { border-color: var(--ana-renk); box-shadow: 0 0 0 .2rem rgba(23, 98, 213, .17); }
+a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+@media (max-width: 768px) {
+  .display-4 { font-size: 2.4rem; }
+  .hero { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  .card-visual { min-height: 155px; }
+}

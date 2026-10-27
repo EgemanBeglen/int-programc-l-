@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AkademiX: HTML, CSS ve Bootstrap eğitim programlarını keşfedin.">
+  <title>AkademiX | Eğitim Programları</title>
+
+  <!-- Ders notu s.12: Önce Bootstrap CSS, ardından özel CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="ust">
+  <!-- Bootstrap Album örneğindeki koyu renkli, açılır üst bölüm -->
+  <header>
+    <div class="collapse bg-dark text-white" id="ustBilgi">
+      <div class="container py-4">
+        <div class="row g-4">
+          <div class="col-md-7">
+            <h2 class="h5">Hakkımızda</h2>
+            <p class="text-white-50 mb-0">AkademiX, HTML, CSS ve Bootstrap konularını uygulamalı örneklerle tanıtan
+              örnek bir eğitim platformudur. Bu sayfa ders çalışması amacıyla hazırlanmıştır.</p>
+          </div>
+          <div class="col-md-5">
+            <h2 class="h5">Hızlı bağlantılar</h2>
+            <ul class="list-unstyled mb-0">
+              <li><a class="text-white" href="#programlar">Eğitim programları</a></li>
+              <li><a class="text-white" href="#takvim">Ders takvimi</a></li>
+              <li><a class="text-white" href="#kayit">Ön kayıt</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark" aria-label="Ana menü">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#ust"><span class="brand-symbol" aria-hidden="true">◆</span> AkademiX</a>
+        <div class="d-flex align-items-center gap-3">
+          <a class="nav-link text-white d-none d-sm-inline" href="#programlar">Programlar</a>
+          <a class="nav-link text-white d-none d-sm-inline" href="#takvim">Takvim</a>
+          <a class="nav-link text-white d-none d-sm-inline" href="#kayit">Kayıt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ustBilgi"
+            aria-controls="ustBilgi" aria-expanded="false" aria-label="Hakkımızda bölümünü aç veya kapat">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Album şablonu: Ortalı karşılama (hero) alanı -->
+    <section class="hero py-5 text-center" aria-labelledby="anaBaslik">
+      <div class="container py-lg-5">
+        <span class="badge text-bg-warning mb-3">VS Code ile Uygulamalı Eğitim</span>
+        <h1 class="display-4 fw-bold mb-3" id="anaBaslik">Web Tasarımını<br>Adım Adım Öğren</h1>
+        <p class="lead mx-auto hero-aciklama mb-4">HTML ile yapıyı kur, CSS ile tasarla, Bootstrap ile mobil uyumlu
+          sayfalar geliştir.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+          <a href="#programlar" class="btn btn-primary btn-lg">Programları İncele</a>
+          <a href="#kayit" class="btn btn-outline-secondary btn-lg">Ön Kayıt Oluştur</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Album şablonu: bg-light üzerinde responsive kart galerisi -->
+    <section class="album py-5 bg-light" id="programlar" aria-labelledby="programBaslik">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">EĞİTİM KATALOĞU</span>
+          <h2 class="fw-bold mt-2" id="programBaslik">Eğitim Programlarımız</h2>
+          <p class="text-secondary mb-0">İlgi duyduğun konuyu seç ve içerikleri keşfet.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-html" role="img"
+                aria-label="HTML5 konusunu simgeleyen turuncu kart görseli"><span>HTML</span><small>01 /
+                  TEMELLER</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">HTML Temelleri</h3>
+                <p class="card-text text-secondary">Başlık, paragraf, bağlantı, görsel ve semantik etiketlerle sayfanın
+                  iskeletini oluştur.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Başlangıç</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-css" role="img" aria-label="CSS konusunu simgeleyen mavi kart görseli">
+                <span>CSS</span><small>02 / TASARIM</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">CSS ile Tasarım</h3>
+                <p class="card-text text-secondary">Renkler, yazı tipleri, kutu modeli, seçiciler ve hover efektleriyle
+                  tasarımını geliştir.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Başlangıç</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-bootstrap" role="img"
+                aria-label="Bootstrap konusunu simgeleyen mor kart görseli"><span>BS 5</span><small>03 /
+                  BİLEŞENLER</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Bootstrap 5.3</h3>
+                <p class="card-text text-secondary">Container, row, col, navbar, card ve button sınıflarıyla hızlı sayfa
+                  tasarla.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Orta</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-responsive" role="img"
+                aria-label="Responsive tasarımı simgeleyen yeşil kart görseli"><span>RWD</span><small>04 / MOBİL
+                  UYUM</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Responsive Tasarım</h3>
+                <p class="card-text text-secondary">Flexbox, grid ve media query kullanarak telefon, tablet ve
+                  bilgisayara uyum sağla.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Orta</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-forms" role="img"
+                aria-label="Form geliştirmeyi simgeleyen pembe kart görseli"><span>FORM</span><small>05 /
+                  ETKİLEŞİM</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Form ve Tablolar</h3>
+                <p class="card-text text-secondary">Label, input, select, button ve table elemanlarıyla düzenli
+                  kullanıcı arayüzleri oluştur.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Başlangıç</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <div class="card-visual visual-project" role="img"
+                aria-label="Web projesi geliştirmeyi simgeleyen koyu renkli kart görseli"><span>WEB</span><small>06 /
+                  UYGULAMA</small></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Uygulamalı Web Projesi</h3>
+                <p class="card-text text-secondary">Öğrendiklerini birleştir; giriş sayfası, kartlar, tablo, form ve
+                  footer tasarla.</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <a href="#kayit" class="btn btn-sm btn-outline-primary">Başvur</a><small
+                    class="text-body-secondary">Proje</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ders notu s.6 ve s.24: tablo ve form -->
+    <section class="py-5" id="takvim" aria-labelledby="takvimBaslik">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-3" id="takvimBaslik">Örnek Ders Takvimi</h2>
+            <p class="text-secondary">Aşağıdaki program eğitim amaçlı örnek olarak hazırlanmıştır.</p>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Hafta</th>
+                    <th scope="col">Konu</th>
+                    <th scope="col">İçerik</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>HTML</td>
+                    <td>Semantik sayfa yapısı</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>CSS</td>
+                    <td>Seçiciler ve kutu modeli</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Bootstrap</td>
+                    <td>Grid ve bileşenler</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Proje</td>
+                    <td>Responsive web sayfası</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6" id="kayit">
+            <div class="card shadow-sm kayit-karti">
+              <div class="card-body p-4">
+                <h2 class="fw-bold h3 mb-2">Ön Kayıt Formu</h2>
+                <p class="text-secondary small">Bu form ders demosudur; bilgiler bir sunucuya gönderilmez.</p>
+                <form id="onKayitFormu">
+                  <div class="mb-3">
+                    <label class="form-label" for="adSoyad">Ad Soyad</label>
+                    <input class="form-control" type="text" id="adSoyad" name="adSoyad"
+                      placeholder="Adınızı ve soyadınızı yazın" autocomplete="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="eposta">E-posta</label>
+                    <input class="form-control" type="email" id="eposta" name="eposta" placeholder="ornek@eposta.com"
+                      autocomplete="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="program">İlgilendiğiniz program</label>
+                    <select class="form-select" id="program" name="program" required>
+                      <option value="" selected disabled>Program seçiniz</option>
+                      <option>HTML Temelleri</option>
+                      <option>CSS ile Tasarım</option>
+                      <option>Bootstrap 5.3</option>
+                      <option>Responsive Tasarım</option>
+                      <option>Form ve Tablolar</option>
+                      <option>Uygulamalı Web Projesi</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary w-100" type="submit">Örnek Başvuru Oluştur</button>
+                  <div id="formMesaj" class="alert alert-success mt-3 mb-0 d-none" role="status" aria-live="polite">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2026 AkademiX · HTML, CSS ve Bootstrap ders projesi</p>
+      <a href="#ust" class="text-white">Başa dön ↑</a>
+    </div>
+  </footer>
+
+  <!-- Ders notu s.12: Etkileşimli Bootstrap bileşenleri için bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Demo form: gerçek bir kayıt göndermez, sadece sayfada bilgilendirme gösterir.
+    document.getElementById('onKayitFormu').addEventListener('submit', function (olay) {
+      olay.preventDefault();
+      const mesaj = document.getElementById('formMesaj');
+      mesaj.textContent = 'Form doğrulandı! Bu bir örnek projedir; başvurunuz herhangi bir yere gönderilmedi.';
+      mesaj.classList.remove('d-none');
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>
